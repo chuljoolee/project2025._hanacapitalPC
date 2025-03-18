@@ -24,6 +24,8 @@ import IconPrivacyGuide from '@/assets/images/icon/privacy-guide.svg?component';
 import IconWarning from '@/assets/images/icon/warning.svg?component';
 import IconLink from '@/assets/images/icon/link.svg?component';
 import IconDownload from '@/assets/images/common/download.svg?component';
+import IconPersonMedal from '@/assets/images/icon/person-medal.svg';
+import IconInformation2 from '@/assets/images/icon/information-2.svg';
 
 export default {
   components: {
@@ -46,6 +48,8 @@ export default {
     IconWarning,
     IconLink,
     IconDownload,
+    IconPersonMedal,
+    IconInformation2,
   },
   setup() {
     const store = {
@@ -186,42 +190,280 @@ export default {
 
     <BasicHr theme="quaternary" className="row-margin-block" />
 
-    <div :class="$style['customer-layout']">
+    <!-- s: 250124 삭제 -->
+    <!-- <section :class="$style['customer-layout__section']">
+      <div class="flex-box row-margin-container-medium">
+        <div class="flex-box__cell flex-1">
+          <h3 class="text-big-3">금융소비자보호</h3>
+        </div>
+      </div>
+      <div :class="$style['icon-list']">
+        <ul :class="[$style['icon-list__list'], 'flex-wrap']">
+          <li :class="[$style['icon-list__item'], 'flex-item']">
+            <div :class="[$style['icon-list__block'], 'flex-itemChild']">
+              <div :class="$style['icon-list__icon']"><IconWarning /></div>
+              <div :class="$style['icon-list__content']">
+                <div :class="$style['icon-list__title']">금융소비자보호</div>
+                <div
+                  :class="[$style['customer-links'], 'row-margin-item-medium']"
+                >
+                  <ul :class="[$style['customer-links__list'], 'flex-column']">
+                    <li :class="$style['customer-links__item']">
+                      <TextButton
+                        iconSize="medium"
+                        textSize="medium"
+                        :block="true"
+                        :classNames="{ wrap: 'color-gray-tertiary' }"
+                        tagName="RouterLink"
+                        to=""
+                      >
+                        금융소비자보호헌장
+                        <template v-slot:rightIcon>
+                          <IconLink />
+                        </template>
+                      </TextButton>
+                    </li>
+                    <li :class="$style['customer-links__item']">
+                      <TextButton
+                        iconSize="medium"
+                        textSize="medium"
+                        :block="true"
+                        :classNames="{ wrap: 'color-gray-tertiary' }"
+                        tagName="RouterLink"
+                        to=""
+                      >
+                        금융소비자보호조직
+                        <template v-slot:rightIcon>
+                          <IconLink />
+                        </template>
+                      </TextButton>
+                    </li>
+                    <li :class="$style['customer-links__item']">
+                      <TextButton
+                        iconSize="medium"
+                        textSize="medium"
+                        :block="true"
+                        :classNames="{ wrap: 'color-gray-tertiary' }"
+                        tagName="RouterLink"
+                        to=""
+                      >
+                        금융소비자보호공시
+                        <template v-slot:rightIcon>
+                          <IconLink />
+                        </template>
+                      </TextButton>
+                    </li>
+                    <li :class="$style['customer-links__item']">
+                      <TextButton
+                        iconSize="medium"
+                        textSize="medium"
+                        :block="true"
+                        :classNames="{ wrap: 'color-gray-tertiary' }"
+                        tagName="RouterLink"
+                        to=""
+                      >
+                        금융소비자보호체계
+                        <template v-slot:rightIcon>
+                          <IconLink />
+                        </template>
+                      </TextButton>
+                    </li>
+                    <li :class="$style['customer-links__item']">
+                      <TextButton
+                        iconSize="medium"
+                        textSize="medium"
+                        :block="true"
+                        :classNames="{ wrap: 'color-gray-tertiary' }"
+                        tagName="RouterLink"
+                        to=""
+                      >
+                        금융소비자보호 내부통제규정
+                        <template v-slot:rightIcon>
+                          <IconLink />
+                        </template>
+                      </TextButton>
+                    </li>
+                    <li :class="$style['customer-links__item']">
+                      <TextButton
+                        iconSize="medium"
+                        textSize="medium"
+                        :block="true"
+                        :classNames="{ wrap: 'color-gray-tertiary' }"
+                        tagName="RouterLink"
+                        to=""
+                      >
+                        금융소비자보호 우수사례
+                        <template v-slot:rightIcon>
+                          <IconLink />
+                        </template>
+                      </TextButton>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li :class="[$style['icon-list__item'], 'flex-item']">
+            <div :class="[$style['icon-list__block'], 'flex-itemChild']">
+              <div :class="$style['icon-list__icon']"><IconPersonMedal /></div>
+              <div :class="$style['icon-list__content']">
+                <div :class="$style['icon-list__title']">금융소비자권리</div>
+                <div
+                  :class="[$style['customer-links'], 'row-margin-item-medium']"
+                >
+                  <ul :class="[$style['customer-links__list'], 'flex-column']">
+                    <li :class="$style['customer-links__item']">
+                      <TextButton
+                        iconSize="medium"
+                        textSize="medium"
+                        :block="true"
+                        :classNames="{ wrap: 'color-gray-tertiary' }"
+                        tagName="RouterLink"
+                        to=""
+                      >
+                        금리인하요구권
+                        <template v-slot:rightIcon>
+                          <IconLink />
+                        </template>
+                      </TextButton>
+                    </li>
+                    <li :class="$style['customer-links__item']">
+                      <TextButton
+                        iconSize="medium"
+                        textSize="medium"
+                        :block="true"
+                        :classNames="{ wrap: 'color-gray-tertiary' }"
+                        tagName="RouterLink"
+                        to=""
+                      >
+                        청약철회권
+                        <template v-slot:rightIcon>
+                          <IconLink />
+                        </template>
+                      </TextButton>
+                    </li>
+                    <li :class="$style['customer-links__item']">
+                      <TextButton
+                        iconSize="medium"
+                        textSize="medium"
+                        :block="true"
+                        :classNames="{ wrap: 'color-gray-tertiary' }"
+                        tagName="RouterLink"
+                        to=""
+                      >
+                        자료열람요구권
+                        <template v-slot:rightIcon>
+                          <IconLink />
+                        </template>
+                      </TextButton>
+                    </li>
+                    <li :class="$style['customer-links__item']">
+                      <TextButton
+                        iconSize="medium"
+                        textSize="medium"
+                        :block="true"
+                        :classNames="{ wrap: 'color-gray-tertiary' }"
+                        tagName="RouterLink"
+                        to=""
+                      >
+                        위법계약해지권
+                        <template v-slot:rightIcon>
+                          <IconLink />
+                        </template>
+                      </TextButton>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li :class="[$style['icon-list__item'], 'flex-item']">
+            <div :class="[$style['icon-list__block'], 'flex-itemChild']">
+              <div :class="$style['icon-list__icon']"><IconInformation2 /></div>
+              <div :class="$style['icon-list__content']">
+                <div :class="$style['icon-list__title']">민원창구·유익정보</div>
+                <div
+                  :class="[$style['customer-links'], 'row-margin-item-medium']"
+                >
+                  <ul :class="[$style['customer-links__list'], 'flex-column']">
+                    <li :class="$style['customer-links__item']">
+                      <TextButton
+                        iconSize="medium"
+                        textSize="medium"
+                        :block="true"
+                        :classNames="{ wrap: 'color-gray-tertiary' }"
+                        tagName="RouterLink"
+                        to=""
+                      >
+                        전자민원접수
+                        <template v-slot:rightIcon>
+                          <IconLink />
+                        </template>
+                      </TextButton>
+                    </li>
+                    <li :class="$style['customer-links__item']">
+                      <TextButton
+                        iconSize="medium"
+                        textSize="medium"
+                        :block="true"
+                        :classNames="{ wrap: 'color-gray-tertiary' }"
+                        tagName="RouterLink"
+                        to=""
+                      >
+                        방문·전화권유판매원 조회
+                        <template v-slot:rightIcon>
+                          <IconLink />
+                        </template>
+                      </TextButton>
+                    </li>
+                    <li :class="$style['customer-links__item']">
+                      <TextButton
+                        iconSize="medium"
+                        textSize="medium"
+                        :block="true"
+                        :classNames="{ wrap: 'color-gray-tertiary' }"
+                        tagName="RouterLink"
+                        to=""
+                      >
+                        소비자권익보호 유익한 정보
+                        <template v-slot:rightIcon>
+                          <IconLink />
+                        </template>
+                      </TextButton>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section> -->
+
+    <!-- <BasicHr theme="quaternary" className="row-margin-block" /> -->
+    <!-- e:// 250124 삭제 -->
+
+    <div :class="[$style['customer-layout']]">
       <section :class="$style['customer-layout__section']">
         <div class="flex-box row-margin-container-medium">
           <div class="flex-box__cell flex-1">
             <h3 class="text-big-3">홈페이지 이용 안내</h3>
           </div>
-          <div class="flex-box__cell flex-box__cell--small">
-            <BasicButton
-              size="small"
-              :line="true"
-              theme="quaternary"
-              tagName="RouterLink"
-              to=""
-              >정책 및 약관</BasicButton
-            >
-          </div>
-          <div class="flex-box__cell">
-            <BasicButton
-              size="small"
-              :line="true"
-              theme="quaternary"
-              tagName="RouterLink"
-              to=""
-              >이용 시 유의사항</BasicButton
-            >
-          </div>
         </div>
         <div
-          :class="[
-            $style['icon-list'],
-            $style['icon-list--wrap'],
-            $style['homepage-guide-list'],
-          ]"
+          :class="
+            ([
+              $style['icon-list'],
+              $style['icon-list--wrap'],
+              $style['homepage-guide-list'],
+            ],
+            'flex-wrap')
+          "
         >
-          <ul :class="$style['icon-list__list']">
-            <li :class="$style['icon-list__item']">
+          <ul :class="[$style['icon-list__list'], 'flex-item2 flex-ul']">
+            <li :class="[$style['icon-list__item']]">
               <div :class="$style['icon-list__block']">
                 <div :class="$style['icon-list__icon']"><IconLock /></div>
                 <div :class="$style['icon-list__content']">
@@ -261,7 +503,7 @@ export default {
                 </div>
               </div>
             </li>
-            <li :class="$style['icon-list__item']">
+            <li :class="[$style['icon-list__item']]">
               <div :class="$style['icon-list__block']">
                 <div :class="$style['icon-list__icon']">
                   <IconPrivacyGuide />
@@ -307,113 +549,41 @@ export default {
             </li>
           </ul>
         </div>
-      </section>
-      <section :class="$style['customer-layout__section']">
-        <div class="flex-box row-margin-container-medium">
-          <div class="flex-box__cell flex-1">
-            <h3 class="text-big-3">기타 안내</h3>
-          </div>
-          <div class="flex-box__cell flex-box__cell--small">
+        <div class="flex-box row-margin-container-medium flex-margin">
+          <div class="flex-box__cell">
             <BasicButton
               size="small"
               :line="true"
               theme="quaternary"
               tagName="RouterLink"
               to=""
+              >정책 및 약관</BasicButton
             >
-              서식 다운로드
-              <template v-slot:rightIcon> <IconDownload /> </template>
-            </BasicButton>
+          </div>
+          <div class="flex-box__cell">
+            <BasicButton
+              size="small"
+              :line="true"
+              theme="quaternary"
+              tagName="RouterLink"
+              to=""
+              >이용 시 유의사항</BasicButton
+            >
+          </div>
+          <div class="flex-box__cell">
+            <BasicButton
+              size="small"
+              :line="true"
+              theme="quaternary"
+              tagName="RouterLink"
+              to=""
+              >서식 다운로드</BasicButton
+            >
           </div>
         </div>
-        <div :class="$style['icon-list']">
-          <ul :class="$style['icon-list__list']">
-            <li :class="$style['icon-list__item']">
-              <div :class="$style['icon-list__block']">
-                <div :class="$style['icon-list__icon']"><IconWarning /></div>
-                <div :class="$style['icon-list__content']">
-                  <div :class="$style['icon-list__title']">금융소비자보호</div>
-                  <div
-                    :class="[
-                      $style['customer-links'],
-                      'row-margin-item-medium',
-                    ]"
-                  >
-                    <ul :class="$style['customer-links__list']">
-                      <li :class="$style['customer-links__item']">
-                        <TextButton
-                          iconSize="medium"
-                          textSize="medium"
-                          :block="true"
-                          :classNames="{ wrap: 'color-gray-tertiary' }"
-                          tagName="RouterLink"
-                          to=""
-                        >
-                          금융소비자보호헌장
-                          <template v-slot:rightIcon>
-                            <IconLink />
-                          </template>
-                        </TextButton>
-                      </li>
-                      <li :class="$style['customer-links__item']">
-                        <TextButton
-                          iconSize="medium"
-                          textSize="medium"
-                          :block="true"
-                          :classNames="{ wrap: 'color-gray-tertiary' }"
-                          tagName="RouterLink"
-                          to=""
-                        >
-                          금융소비자보호조직
-                          <template v-slot:rightIcon>
-                            <IconLink />
-                          </template>
-                        </TextButton>
-                      </li>
-                      <li :class="$style['customer-links__item']">
-                        <TextButton
-                          iconSize="medium"
-                          textSize="medium"
-                          :block="true"
-                          :classNames="{ wrap: 'color-gray-tertiary' }"
-                          tagName="RouterLink"
-                          to=""
-                        >
-                          금융소비자보호체계
-                          <template v-slot:rightIcon>
-                            <IconLink />
-                          </template>
-                        </TextButton>
-                      </li>
-                      <li :class="$style['customer-links__item']">
-                        <TextButton
-                          iconSize="medium"
-                          textSize="medium"
-                          :block="true"
-                          :classNames="{ wrap: 'color-gray-tertiary' }"
-                          tagName="RouterLink"
-                          to=""
-                        >
-                          금융소비자보호웹진
-                          <template v-slot:rightIcon>
-                            <IconLink />
-                          </template>
-                        </TextButton>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
       </section>
-    </div>
 
-    <BasicHr theme="quaternary" className="row-margin-block" />
-
-    <div :class="$style['customer-layout']">
-      <section :class="$style['customer-layout__section']">
+      <section :class="[$style['customer-layout__section'], 'flex-item2']">
         <div class="flex-box row-margin-contents">
           <div class="flex-box__cell flex-1">
             <h3 class="text-big-3">공지사항</h3>
@@ -423,7 +593,7 @@ export default {
               iconSize="medium"
               textSize="medium"
               :block="true"
-              :classNames="{ wrap: 'color-gray-tertiary' }"
+              :classNames="{ wrap: 'color-gray-tertiary flex-button' }"
             >
               더보기
               <template v-slot:rightIcon>
@@ -456,52 +626,75 @@ export default {
           </ul>
         </div>
       </section>
-      <section :class="$style['customer-layout__section']">
-        <div class="flex-box row-margin-contents">
-          <div class="flex-box__cell flex-1">
-            <h3 class="text-big-3">이벤트</h3>
-          </div>
-          <div class="flex-box__cell">
-            <TextButton
-              iconSize="medium"
-              textSize="medium"
-              :block="true"
-              :classNames="{ wrap: 'color-gray-tertiary' }"
-            >
-              더보기
-              <template v-slot:rightIcon>
-                <IconLink />
-              </template>
-            </TextButton>
-          </div>
-        </div>
-
-        <!-- DD : 관리자 등록 배너 -->
-        <EventBanner thumb="/images/_dummy/img-area.png" @click="() => {}">
-          <div class="inline-wrap row-margin-item-medium">
-            <RoundStatus size="small" theme="duodenary">진행중</RoundStatus>
-          </div>
-          <h3 class="text-title-1 font-weight-medium ellipsis">
-            타이틀 노출 최대 1줄 타이틀 노출 최대 1줄 타이틀 노출 최대 1줄
-          </h3>
-          <p
-            class="text-body-1 font-weight-light row-margin-small multi-ellipsis"
-          >
-            설명 노출 최대 2줄 설명 노출 최대 2줄 설명 노출 최대 2줄 설명 노출
-            최대 2줄 설명 노출 최대 2줄 설명 노출 최대 2줄
-          </p>
-          <p
-            class="text-body-3 font-weight-light color-gray-tertiary row-margin-item-medium"
-          >
-            2022.12.01 ~ 2022.12.31
-          </p>
-        </EventBanner>
-        <!-- // DD : 관리자 등록 배너 -->
-      </section>
     </div>
   </PageContents>
 </template>
 
 <style lang="scss" module>
 @import '@/assets/scss/views/customer/Customer_P00_p001.scss';
+</style>
+
+<style lang="scss" scoped>
+.flex-wrap {
+  display: flex;
+  margin: -30px 0 0 -30px;
+
+  .flex-item {
+    flex: 1;
+    margin-top: 0;
+    padding: 30px 0 0 30px;
+
+    .flex-itemChild {
+      align-items: flex-start;
+    }
+
+    .flex-column {
+      flex-direction: column;
+    }
+
+    & + & {
+      padding-left: 30px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    gap: 80px;
+  }
+
+  .flex-item2 {
+    margin-top: 24px;
+    padding-top: 16px;
+
+    &:nth-of-type(1) {
+      flex: 2;
+    }
+    &:nth-of-type(2) {
+      flex: 1;
+    }
+    &.flex-ul {
+      display: flex;
+
+      li {
+        flex: 1;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.flex-width {
+  flex: 1;
+}
+
+.flex-box__cell {
+  flex: 1;
+}
+
+.flex-margin {
+  margin-top: 50px;
+}
+
+.flex-button {
+  justify-content: flex-end;
+}
 </style>

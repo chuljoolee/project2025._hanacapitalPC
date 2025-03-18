@@ -187,6 +187,17 @@ export default {
           <BoxCheckLabel>영상정보처리기기 운영 · 관리 방침</BoxCheckLabel>
         </BoxCheck>
       </BoxCheckListItem>
+      <!-- 241014 -->
+      <BoxCheckListItem>
+        <BoxCheck
+          :minSide="true"
+          name="Customer_P08_p001_document"
+          id="Customer_P08_p001_document_013"
+        >
+          <BoxCheckLabel>상품약관 </BoxCheckLabel>
+        </BoxCheck>
+      </BoxCheckListItem>
+      <!-- 241014 -->
     </BoxCheckList>
 
     <FormList
@@ -250,6 +261,10 @@ export default {
                 {
                   value: '12',
                   label: '영상정보처리기기 운영 · 관리 방침',
+                },
+                {
+                  value: '13',
+                  label: '상품약관',
                 },
               ]"
               title="약관명"

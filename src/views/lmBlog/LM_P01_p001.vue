@@ -36,6 +36,7 @@ import KeyValueTitle from '@/components/ui/text/KeyValueTitle.vue';
 import KeyValueText from '@/components/ui/text/KeyValueText.vue';
 import FloatingWrap from '@/components/ui/layout/FloatingWrap.vue';
 import FloatingButton from '@/components/ui/button/FloatingButton.vue';
+import RoundStatus from '@/components/ui/text/RoundStatus.vue'; //250220 추가
 
 import IconSearchCompany from '@/assets/images/icon/search-company.svg?component';
 
@@ -74,6 +75,7 @@ export default {
     FloatingWrap,
     FloatingButton,
     IconSearchCompany,
+    RoundStatus, //250220 추가
   },
 
   setup() {
@@ -204,11 +206,21 @@ export default {
         </FormList>
       </section>
 
-      <ButtonList>
-        <ButtonListItem>
-          <BasicButton theme="tertiary">신용정보조회동의(URL 발송)</BasicButton>
-        </ButtonListItem>
-      </ButtonList>
+      <div class="row-margin-block">
+        <!-- s: 250220 수정 -->
+        <h4 class="text-body-4 color-gray row-margin-item">
+          신용정보조회 동의 URL 발송
+        </h4>
+        <ButtonList className="row-margin-top-none">
+          <ButtonListItem>
+            <BasicButton theme="tertiary">신용대출</BasicButton>
+          </ButtonListItem>
+          <ButtonListItem>
+            <BasicButton theme="secondary">주택담보대출</BasicButton>
+          </ButtonListItem>
+        </ButtonList>
+        <!-- e:// 250220 수정 -->
+      </div>
     </div>
 
     <BasicHr theme="quaternary" className="row-margin-block" />
@@ -325,6 +337,56 @@ export default {
           </ButtonList>
         </BasicBox>
       </li>
+      <!-- s: 250220 추가 -->
+      <li class="row-margin-contents">
+        <BasicBox>
+          <BasicBoxHead>
+            <BasicBoxHeadLeft>
+              <h3 class="text-title-2 font-weight-medium">김하나</h3>
+            </BasicBoxHeadLeft>
+            <span>
+              <RoundStatus theme="tredecary" size="large"
+                >주택담보대출</RoundStatus
+              >
+            </span>
+          </BasicBoxHead>
+
+          <KeyValue :wrap="true">
+            <KeyValueItem>
+              <KeyValueTitle>생년월일</KeyValueTitle>
+              <KeyValueText>123456-2******</KeyValueText>
+            </KeyValueItem>
+
+            <KeyValueItem>
+              <KeyValueTitle>휴대폰번호</KeyValueTitle>
+              <KeyValueText>010-1234-5678</KeyValueText>
+            </KeyValueItem>
+
+            <KeyValueItem>
+              <KeyValueTitle>URL발송일</KeyValueTitle>
+              <KeyValueText>2022.11.09</KeyValueText>
+            </KeyValueItem>
+
+            <KeyValueItem>
+              <KeyValueTitle>동의일자</KeyValueTitle>
+              <KeyValueText>2022.11.09</KeyValueText>
+            </KeyValueItem>
+          </KeyValue>
+
+          <ButtonList
+            :wrap="true"
+            align="center"
+            :classNames="{
+              wrap: 'row-margin-contents',
+            }"
+          >
+            <ButtonListItem>
+              <BasicButton size="regular"> 한도조회 </BasicButton>
+            </ButtonListItem>
+          </ButtonList>
+        </BasicBox>
+      </li>
+      <!-- e:// 250220 추가 -->
       <!-- // Case : 신용정보조회동의 완료 -->
 
       <!-- Case : 신용정보조회동의 미동의 상태 -->

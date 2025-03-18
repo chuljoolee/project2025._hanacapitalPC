@@ -13,6 +13,7 @@ import InventoryFinanceLayout from '@/layouts/inventoryFinance/InventoryFinanceL
 import LmBlogLayout from '@/layouts/lmBlog/LmBlogLayout.vue';
 import LmBlogPersonalLayout from '@/layouts/lmBlogPersonal/LmBlogPersonalLayout.vue';
 import AgentLayout from '@/layouts/agent/AgentLayout.vue';
+import CrmLayout from '@/layouts/crm/CrmLayout.vue'; // 20240315
 
 import LoadingLayer from '@/components/ui/layout/LoadingLayer.vue';
 
@@ -97,6 +98,7 @@ export default {
       LmBlogLayout,
       LmBlogPersonalLayout,
       AgentLayout,
+      CrmLayout, // 20240315
     };
     const layout = computed(() => {
       const { layout } = route.meta;

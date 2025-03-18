@@ -1,5 +1,5 @@
 <script>
-// Common_P00_l004
+// Common_P00_l004 기존
 import { ref, computed, watch } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
 import Simplebar from 'simplebar-vue';
@@ -1534,6 +1534,41 @@ export default {
                 </div>
               </section>
               <!-- // 하나머니 -->
+
+              <!-- 하나원큐오토 CRM 20240315 -->
+              <section :class="$style['nav__section']">
+                <h3 :class="$style['nav__title']">
+                  <span :class="$style['nav__title-text']">하나원큐오토</span>
+                </h3>
+                <div :class="$style['nav__contents']">
+                  <div :class="$style['nav__depth']">
+                    <ul :class="$style['nav__depth-list']">
+                      <li :class="$style['nav__depth-item']">
+                        <div :class="$style['nav__depth-title']">
+                          <span :class="$style['nav__depth-text']"
+                            >리스/렌트</span
+                          >
+                        </div>
+                        <div :class="$style['nav__depth-contents']">
+                          <ul :class="$style['nav__list']">
+                            <li :class="$style['nav__item']">
+                              <div :class="$style['nav__text']">
+                                <RouterLink
+                                  to=""
+                                  :class="$style['nav__link']"
+                                  @click="layerSlotProps.close()"
+                                  >CRM</RouterLink
+                                >
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <!-- // 하나원큐오토 CRM 20240315 -->
 
               <!-- 회원관리 -->
               <section :class="$style['nav__section']">

@@ -1,0 +1,23 @@
+@import '@/assets/scss/components/import/product-top.scss';
+@import '@/assets/scss/components/import/product-detail.scss';
+@import '@/assets/scss/components/import/product-info.scss';
+@import '@/assets/scss/components/import/basic-list.scss';
+@import '@/assets/scss/components/import/step.scss';
+@import '@/assets/scss/components/import/icon-list.scss';
+@import '@/assets/scss/components/import/contents-list.scss';
+
+.contents-list {
+  &__list--quinary {
+    > .contents-list__item {
+      & + .contents-list__item {
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
+.product-box {
+  width: 8px;
+  height: 30px;
+  background-color: $color-green-50;
+}

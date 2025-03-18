@@ -224,6 +224,11 @@ const routes = [
     component: () => import('@/views/uiGuide/GuideAuto005.vue'),
   },
   {
+    path: '/ui-guide/auto-006',
+    name: '/ui-guide/auto-006',
+    component: () => import('@/views/uiGuide/GuideAuto006.vue'),
+  },
+  {
     path: '/ui-guide/main-001',
     name: '/ui-guide/main-001',
     component: () => import('@/views/uiGuide/GuideMain001.vue'),
@@ -253,6 +258,12 @@ const routes = [
     name: '/ui-guide/agent-005',
     component: () => import('@/views/uiGuide/GuideAgent005.vue'),
   },
+  {
+    // 20240313
+    path: '/ui-guide/GuideCrm001',
+    name: '/ui-guide/GuideCrm001',
+    component: () => import('@/views/uiGuide/GuideCrm001.vue'),
+  }, // 20240313
 
   // guide
   {
@@ -479,6 +490,48 @@ const routes = [
     name: '/customer/Customer_P09_p009',
     component: () => import('@/views/customer/Customer_P09_p009.vue'),
   },
+  // S: 240725 추가
+  {
+    path: '/customer/Customer_P09_p010',
+    name: '/customer/Customer_P09_p010',
+    component: () => import('@/views/customer/Customer_P09_p010.vue'),
+  },
+  {
+    path: '/customer/Customer_P09_p011',
+    name: '/customer/Customer_P09_p011',
+    component: () => import('@/views/customer/Customer_P09_p011.vue'),
+  },
+  {
+    path: '/customer/Customer_P09_p012',
+    name: '/customer/Customer_P09_p012',
+    component: () => import('@/views/customer/Customer_P09_p012.vue'),
+  },
+  {
+    path: '/customer/Customer_P09_p013',
+    name: '/customer/Customer_P09_p013',
+    component: () => import('@/views/customer/Customer_P09_p013.vue'),
+  },
+  {
+    path: '/customer/Customer_P21_p001',
+    name: '/customer/Customer_P21_p001',
+    component: () => import('@/views/customer/Customer_P21_p001.vue'),
+  },
+  {
+    path: '/customer/Customer_P21_p002',
+    name: '/customer/Customer_P21_p002',
+    component: () => import('@/views/customer/Customer_P21_p002.vue'),
+  },
+  {
+    path: '/customer/Customer_P21_p002',
+    name: '/customer/Customer_P21_p002',
+    component: () => import('@/views/customer/Customer_P21_p002.vue'),
+  },
+  {
+    path: '/customer/Customer_P22_p001',
+    name: '/customer/Customer_P22_p001',
+    component: () => import('@/views/customer/Customer_P22_p001.vue'),
+  },
+  // // E: 240725 추가
   {
     path: '/customer/Customer_P15_p001',
     name: '/customer/Customer_P15_p001',
@@ -504,8 +557,7 @@ const routes = [
     name: '/customer/Customer_P16_p003',
     component: () => import('@/views/customer/Customer_P16_p003.vue'),
   },
-
-  // additional-service
+  // additional-service(부가서비스)
   {
     path: '/additional-service/My_P02_p001',
     name: '/additional-service/My_P02_p001',
@@ -561,6 +613,33 @@ const routes = [
     name: '/additional-service/Etc_P01_p002',
     component: () => import('@/views/additionalService/Etc_P01_p002.vue'),
   },
+  //S: 240513~14 추가
+  {
+    path: '/additional-service/My_P03_l004',
+    name: '/additional-service/My_P03_l004',
+    component: () => import('@/views/additionalService/My_P03_l004.vue'),
+  },
+  {
+    path: '/additional-service/My_P03_l016',
+    name: '/additional-service/My_P03_l016',
+    component: () => import('@/views/additionalService/My_P03_l016.vue'),
+  },
+  {
+    path: '/additional-service/My_P03_l017',
+    name: '/additional-service/My_P03_l017',
+    component: () => import('@/views/additionalService/My_P03_l017.vue'),
+  },
+  {
+    path: '/additional-service/My_P03_l018',
+    name: '/additional-service/My_P03_l018',
+    component: () => import('@/views/additionalService/My_P03_l018.vue'),
+  },
+  {
+    path: '/additional-service/My_P03_l021',
+    name: '/additional-service/My_P03_l021',
+    component: () => import('@/views/additionalService/My_P03_l021.vue'),
+  },
+  // //E: 240513~14 추가
 
   // sign
   {
@@ -1381,6 +1460,13 @@ const routes = [
     name: '/personal-loan/PF_P07_p013',
     component: () => import('@/views/personalLoan/PF_P07_p013.vue'),
   },
+  // S:240513 추가
+  {
+    path: '/personal-loan/PF_P07_p017',
+    name: '/personal-loan/PF_P07_p017',
+    component: () => import('@/views/personalLoan/PF_P07_p017.vue'),
+  },
+  // //E:240513 추가
   {
     path: '/personal-loan/PF_P09_p002',
     name: '/personal-loan/PF_P09_p002',
@@ -1677,6 +1763,11 @@ const routes = [
 
   // company
   {
+    path: '/company/Company_P05_p005_test',
+    name: '/company/Company_P05_p005_test',
+    component: () => import('@/views/company/Company_P05_p005_test.vue'),
+  },
+  {
     path: '/company/Company_P01_p001',
     name: '/company/Company_P01_p001',
     component: () => import('@/views/company/Company_P01_p001.vue'),
@@ -1721,6 +1812,13 @@ const routes = [
     name: '/company/Company_P01_p009',
     component: () => import('@/views/company/Company_P01_p009.vue'),
   },
+  // S: 240516 추가
+  {
+    path: '/company/Company_P01_p010',
+    name: '/company/Company_P01_p010',
+    component: () => import('@/views/company/Company_P01_p010.vue'),
+  },
+  // //E: 240516 추가
   {
     path: '/company/Company_P02_p001',
     name: '/company/Company_P02_p001',
@@ -1999,6 +2097,154 @@ const routes = [
     name: '/agent/Agent_P10_p005',
     component: () => import('@/views/agent/Agent_P10_p005.vue'),
     meta: { layout: 'AgentLayout' },
+  },
+
+  // CRM
+  // 20240313
+  {
+    path: '/crm/Crm_P00_p001',
+    name: '/crm/Crm_P00_p001',
+    component: () => import('@/views/crm/Crm_P00_p001.vue'),
+    meta: { layout: 'CrmLayout' },
+  },
+  {
+    path: '/crm/Crm_P00_p002',
+    name: '/crm/Crm_P00_p002',
+    component: () => import('@/views/crm/Crm_P00_p002.vue'),
+    meta: { layout: 'CrmLayout' },
+  },
+  {
+    path: '/crm/Crm_P01_p001',
+    name: '/crm/Crm_P01_p001',
+    component: () => import('@/views/crm/Crm_P01_p001.vue'),
+    meta: { layout: 'CrmLayout' },
+  },
+  {
+    path: '/uiGuide/GuideCrm001',
+    name: '/uiGuide/GuideCrm001',
+    component: () => import('@/views/uiGuide/GuideCrm001.vue'),
+    meta: { layout: 'CrmLayout' },
+  },
+  // 20240313
+
+  // S: 20240529 추가(前 철주 차장님 작업)
+  {
+    path: '/customer/Customer_P14_p007',
+    name: '/customer/Customer_P14_p007',
+    component: () => import('@/views/customer/Customer_P14_p007.vue'),
+  },
+  {
+    path: '/ui-guide/customer-004',
+    name: '/ui-guide/customer-004',
+    component: () => import('@/views/uiGuide/GuideCustomer004.vue'),
+  },
+  // // E: 20240529 추가(前 철주 차장님 작업)
+
+  // S:240529 추가
+  {
+    path: '/customer/Customer_P14_p005',
+    name: '/customer/Customer_P14_p005',
+    component: () => import('@/views/customer/Customer_P14_p005.vue'),
+  },
+  // E:240529 추가
+
+  // s:240906 추가
+  {
+    path: '/customer/Customer_DS_W01',
+    name: '/customer/Customer_DS_W01',
+    component: () => import('@/views/customer/Customer_DS_W01.vue'),
+  },
+  // e:// 240906 추가
+
+  // s:240912 추가
+  {
+    path: '/customer/DS_NO_W01_01',
+    name: '/customer/DS_NO_W01_01',
+    component: () => import('@/views/customer/DS_NO_W01_01.vue'),
+  },
+  {
+    path: '/customer/DS_NO_W01_02',
+    name: 'customer/DS_NO_W01_02',
+    component: () => import('@/views/customer/DS_NO_W01_02.vue'),
+  },
+  {
+    path: '/customer/DS_NO_W01_02_L01',
+    name: '/customer/DS_NO_W01_02_L01',
+    component: () => import('@/views/customer/DS_NO_W01_02_L01.vue'),
+  },
+  {
+    path: '/customer/DS_NO_W01_02_L02',
+    name: '/customer/DS_NO_W01_02_L02',
+    component: () => import('@/views/customer/DS_NO_W01_02_L02.vue'),
+  },
+  {
+    path: '/customer/DS_NO_W01_02_L03',
+    name: '/customer/DS_NO_W01_02_L03',
+    component: () => import('@/views/customer/DS_NO_W01_02_L03.vue'),
+  },
+  // e:// 240912 추가
+
+  /* s: 250122 추가 */
+  {
+    path: '/ui-guide/Common_P11_p001',
+    name: '/ui-guide/Common_P11_p001',
+    component: () => import('@/views/uiGuide/Common_P11_p001.vue'),
+  },
+  {
+    path: '/ui-guide/Common_P11_p002',
+    name: '/ui-guide/Common_P11_p002',
+    component: () => import('@/views/uiGuide/Common_P11_p002.vue'),
+  },
+  {
+    path: '/ui-guide/Common_P11_p003',
+    name: '/ui-guide/Common_P11_p003',
+    component: () => import('@/views/uiGuide/Common_P11_p003.vue'),
+  },
+  {
+    path: '/ui-guide/Common_P11_p004',
+    name: '/ui-guide/Common_P11_p004',
+    component: () => import('@/views/uiGuide/Common_P11_p004.vue'),
+  },
+  {
+    path: '/ui-guide/Common_P11_p005',
+    name: '/ui-guide/Common_P11_p005',
+    component: () => import('@/views/uiGuide/Common_P11_p005.vue'),
+  },
+  {
+    path: '/customer/CstmPtct_P00_p001',
+    name: '/customer/CstmPtct_P00_p001',
+    component: () => import('@/views/customer/CstmPtct_P00_p001.vue'),
+  },
+  {
+    path: '/customer/Customer_P09_p014',
+    name: '/customer/Customer_P09_p014',
+    component: () => import('@/views/customer/Customer_P09_p014.vue'),
+  },
+  {
+    path: '/customer/Customer_P09_p015',
+    name: '/customer/Customer_P09_p015',
+    component: () => import('@/views/customer/Customer_P09_p015.vue'),
+  },
+  /* e:// 250122 추가 */
+
+  /* 250220 추가 */
+  {
+    path: '/lm-blog/LM_P01_p002_001',
+    name: '/lm-blog/LM_P01_p002_001',
+    component: () => import('@/views/lmBlog/LM_P01_p002_001.vue'),
+    meta: { layout: 'LmBlogLayout' },
+  },
+  {
+    path: '/lm-blog/LM_P01_p002_002',
+    name: '/lm-blog/LM_P01_p002_002',
+    component: () => import('@/views/lmBlog/LM_P01_p002_002.vue'),
+    meta: { layout: 'LmBlogLayout' },
+  },
+  /* 250225 추가 */
+  {
+    path: '/personal-loan/PF_P12_p001',
+    name: '/personal-loan/PF_P12_p001',
+    component: () => import('@/views/personalLoan/PF_P12_p001.vue'),
   },
 ];
 

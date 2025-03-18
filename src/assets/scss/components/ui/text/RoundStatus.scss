@@ -76,6 +76,13 @@
       border-color: transparent;
       background-color: rgba($color-navy-90, 0.7);
     }
+    // s: 250220 추가
+    &-tredecary {
+      color: $color-green-65;
+      border-color: transparent;
+      background-color: $color-green-05;
+    }
+    // e:// 250220 추가
   }
 
   &--block {

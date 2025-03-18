@@ -1,0 +1,39 @@
+.tab {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: stretch;
+
+  &__list {
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__button {
+    display: block;
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+
+    &:global(.is-tab-opened) {
+      font-weight: 700;
+    }
+  }
+
+  &__panel {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    align-items: stretch;
+
+    &:global(.is-tab-opened) {
+      display: flex;
+    }
+  }
+
+  &--type-popup {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

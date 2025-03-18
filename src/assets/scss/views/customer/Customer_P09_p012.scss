@@ -1,0 +1,30 @@
+@import '@/assets/scss/components/import/board-search-bar.scss';
+@import '@/assets/scss/components/import/board.scss';
+@import '@/assets/scss/components/import/empty.scss';
+@import '@/assets/scss/components/import/logs.scss';
+
+.logs-wrap {
+  margin-top: 0;
+
+  &::before {
+    content: '';
+    display: table;
+  }
+
+  .logs {
+    margin: -10px 0 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      padding: 10px 0 0 10px;
+      width: 25%;
+
+      & + .logs__item {
+        margin: 0;
+      }
+    }
+  }
+}

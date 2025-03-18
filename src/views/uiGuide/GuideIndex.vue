@@ -12,7 +12,7 @@ const datas = () => [
         depth3: '',
         depth4: '',
         depth5: '',
-        depth6: '',
+        depth6: '', 
         path: '/',
         status: 'ing', // ing, partend, end, moding, confirm
         create: '2023.03.24',
@@ -25,6 +25,103 @@ const datas = () => [
     ],
   },
   */
+  {
+    depth1: '프레임아웃 작업리스트',
+    datas: [
+      {
+        depth2: '프레임아웃 작업',
+        depth3: '대출상담\nLM_P01_p001',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/lm-blog/LM_P01_p001',
+        status: 'end',
+        create: '2023.06.01',
+        log: [
+          {
+            date: '2023.07.28',
+            text: '빠른 직군 검색 버튼 추가',
+          },
+          {
+            date: '2025.02.20',
+            text: '버튼스타일 변경, roundstatus추가',
+          },
+        ],
+      },
+      {
+        depth2: '',
+        depth3: '한도금리 조회 결과\nLM_P01_p002_001',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/lm-blog/LM_P01_p002_001',
+        status: 'end',
+        create: '2025.02.20',
+        log: [
+          // {
+          //   date: '2023.07.28',
+          //   text: '빠른 직군 검색 버튼 추가',
+          // },
+        ],
+      },
+      {
+        depth2: '',
+        depth3: '한도금리 조회 결과-신청불가\nLM_P01_p002_002',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/lm-blog/LM_P01_p002_002',
+        status: 'end',
+        create: '2025.02.20',
+        log: [
+          // {
+          //   date: '2023.07.28',
+          //   text: '빠른 직군 검색 버튼 추가',
+          // },
+        ],
+      },
+      {
+        depth2: '',
+        depth3: '메인\nMain_P01_p003',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/personal-loan/Main_P01_p003',
+        status: 'end',
+        create: '2023.06.09',
+        log: [
+          {
+            date: '2023.08.18',
+            text: '타이틀 및 상품 문구 수정, 순서 변경',
+          },
+          {
+            date: '2023.10.16',
+            text: '문구 전체 수정 및 사업자주택담보대출 아이콘 교체',
+          },
+          {
+            date: '2025.02.20',
+            text: '"하나모기지론" 상품추가',
+          },
+        ],
+      },
+      {
+        depth2: '',
+        depth3: '주택담보대출 상품 소개\nPF_P12_p001',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/personal-loan/PF_P12_p001',
+        status: 'end',
+        create: '2025.02.25',
+        log: [
+          // {
+          //   date: '2023.08.18',
+          //   text: '타이틀 및 상품 문구 수정, 순서 변경',
+          // },
+        ],
+      },
+    ],
+  },
   {
     depth1: '공통',
     datas: [
@@ -233,6 +330,63 @@ const datas = () => [
           },
         ],
       },
+      /* s: 250122 추가 */
+      {
+        depth2: '검색결과_전체',
+        depth3: '',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/ui-guide/Common_P11_p001',
+        status: 'end',
+        create: '2025.01.22',
+        log: [],
+      },
+      {
+        depth2: '검색결과_메뉴',
+        depth3: '',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/ui-guide/Common_P11_p002',
+        status: 'end',
+        create: '2025.01.22',
+        log: [],
+      },
+      {
+        depth2: '검색결과_이벤트',
+        depth3: '',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/ui-guide/Common_P11_p003',
+        status: 'end',
+        create: '2025.01.22',
+        log: [],
+      },
+      {
+        depth2: '검색결과_공지사항',
+        depth3: '',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/ui-guide/Common_P11_p004',
+        status: 'end',
+        create: '2025.01.22',
+        log: [],
+      },
+      {
+        depth2: '검색결과_검색결과 없는 경우',
+        depth3: '',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/ui-guide/Common_P11_p005',
+        status: 'end',
+        create: '2025.01.22',
+        log: [],
+      },
+      /* e:// 250122 추가 */
       {
         depth2: '직장검색',
         depth3: '팝업',
@@ -631,7 +785,12 @@ const datas = () => [
         path: '/customer/Customer_P00_p001',
         status: 'end',
         create: '2023.06.09',
-        log: [],
+        log: [
+          {
+            date: '2043.10.14',
+            text: '민원창구·유익정보 수정 \n보이스피싱 예방 안내 추가',
+          },
+        ],
       },
       {
         depth2: 'FAQ\nCustomer_P01_p001',
@@ -851,7 +1010,12 @@ const datas = () => [
         path: '/customer/Customer_P08_p001',
         status: 'end',
         create: '2023.06.09',
-        log: [],
+        log: [
+          {
+            date: '2024.10.14',
+            text: '상품약관 버튼 추가',
+          },
+        ],
       },
       {
         depth2: '개인정보이용현황',
@@ -927,6 +1091,19 @@ const datas = () => [
         create: '2023.06.14',
         log: [],
       },
+      // S: 240529 추가
+      {
+        depth2: '개인정보이용현황',
+        depth3: '정보이용 제공 조회',
+        depth4: '현황 조회 약관 동의 보기\nCustomer_P14_p005',
+        depth5: '',
+        depth6: '',
+        path: '/customer/Customer_P14_p005',
+        status: 'end',
+        create: '2024.05.29',
+        log: [],
+      },
+      // // E: 240529 추가
       {
         depth2: '개인정보이용현황',
         depth3: '정보이용 제공 조회',
@@ -937,6 +1114,51 @@ const datas = () => [
         status: 'end',
         create: '2023.06.14',
         log: [],
+      },
+      // S: 240528 추가(前 철주차장님 작업)
+      {
+        depth2: '고객센터',
+        depth3: '개인정보 이용 현황',
+        depth4: '정보이용·제공 조회',
+        depth5: '계열사 마케팅 목적 동의 현황 조회\nCustomer_P14_p007',
+        depth6: '',
+        path: '/customer/Customer_P14_p007',
+        status: 'end',
+        create: '2024.04.24',
+        log: [],
+      },
+      {
+        depth2: '고객센터',
+        depth3: '개인정보 이용 현황',
+        depth4: '정보이용·제공 조회',
+        depth5: '팝업\nGuideCustomer004',
+        depth6: '',
+        path: '/ui-guide/customer-004',
+        status: 'end',
+        create: '2024.04.24',
+        log: [
+          {
+            date: '2024.05.02',
+            text: 'Customer_P14_l002 , Customer_P14_l003, Customer_P14_l004 , Customer_P14_l005  ',
+          },
+        ],
+      },
+      // E: 240528 추가(前 철주차장님 작업)
+      {
+        depth2: '금융소비자보호',
+        depth3: '금융 소비자보호 서브메인\nCstmPtct_P00_p001',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/customer/CstmPtct_P00_p001',
+        status: 'end',
+        create: '2025.01.22',
+        log: [
+          {
+            date: '2025.01.22',
+            text: '서브메인',
+          },
+        ],
       },
       {
         depth2: '금융소비자보호',
@@ -983,6 +1205,108 @@ const datas = () => [
           {
             date: '2023.11.10',
             text: '하단에 버튼 추가',
+          },
+          {
+            date: '2024.10.14',
+            text: '상품판매준칙 수정',
+          },
+        ],
+      },
+      // S: 240725 추가
+      {
+        depth2: '금융소비자보호',
+        depth3: '',
+        depth4: '금융소비자보호 규정 제정·개정 이력 목록\nCustomer_P09_p010',
+        depth5: '',
+        depth6: '',
+        path: '/customer/Customer_P09_p010',
+        status: 'ing',
+        create: '2024.07.25',
+        log: [
+          {
+            date: '2024.07.25',
+            text: '신규추가페이지',
+          },
+        ],
+      },
+      {
+        depth2: '금융소비자보호',
+        depth3: '금융소비자보호 내부통제규정',
+        depth4: '금융소비자보호 내부통제규정 목록\nCustomer_P09_p011',
+        depth5: '',
+        depth6: '',
+        path: '/customer/Customer_P09_p011',
+        status: 'ing',
+        create: '2024.07.25',
+        log: [
+          {
+            date: '2024.07.25',
+            text: '신규추가페이지',
+          },
+        ],
+      },
+      {
+        depth2: '금융소비자보호',
+        depth3: '금융소비자보호 우수사례',
+        depth4: '목록\nCustomer_P09_p012',
+        depth5: '',
+        depth6: '',
+        path: '/customer/Customer_P09_p012',
+        status: 'ing',
+        create: '2024.07.25',
+        log: [
+          {
+            date: '2024.07.25',
+            text: '신규추가페이지',
+          },
+        ],
+      },
+      {
+        depth2: '금융소비자보호',
+        depth3: '금융소비자보호 우수사례',
+        depth4: '상세\nCustomer_P09_p013',
+        depth5: '',
+        depth6: '',
+        path: '/customer/Customer_P09_p013',
+        status: 'ing',
+        create: '2024.07.25',
+        log: [
+          {
+            date: '2024.07.25',
+            text: '신규추가페이지',
+          },
+        ],
+      },
+      // // E: 240725 추가
+      {
+        depth2: '금융소비자보호',
+        depth3: '',
+        depth4: '판매 중단 상품 안내\nCustomer_P09_p014',
+        depth5: '',
+        depth6: '',
+        path: '/customer/Customer_P09_p014',
+        status: 'end',
+        create: '2025.01.23',
+        log: [
+          {
+            date: '2025.01.23',
+            text: '신규추가페이지',
+          },
+        ],
+      },
+      {
+        depth2: '금융소비자보호',
+        depth3: '비대면 금융사고 책임분담기준_대고객안내문',
+        depth4: '대고객 안내문\nCustomer_P09_p015',
+        depth5: '',
+        depth6: '',
+        path: '/customer/Customer_P09_p015',
+        status: 'end',
+        create: '2025.01.23',
+        log: [
+          {
+            date: '2025.01.23',
+            text: '신규추가페이지',
           },
         ],
       },
@@ -1035,7 +1359,7 @@ const datas = () => [
         ],
       },
       {
-        depth2: '금융소비자보호',
+        depth2: '금융소비자권리',
         depth3: '금리인하요구권 안내\nCustomer_P09_p007',
         depth4: '',
         depth5: '',
@@ -1051,7 +1375,7 @@ const datas = () => [
         ],
       },
       {
-        depth2: '금융소비자보호',
+        depth2: '금융소비자권리',
         depth3: '대출계약철회권 안내\nCustomer_P09_p008',
         depth4: '',
         depth5: '',
@@ -1066,6 +1390,40 @@ const datas = () => [
           },
         ],
       },
+      // S: 240725 추가
+      {
+        depth2: '금융소비자권리',
+        depth3: '자료열람요구권\nCustomer_P21_p001',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/customer/Customer_P21_p001',
+        status: 'ing',
+        create: '2024.07.25',
+        log: [
+          {
+            date: '2024.07.25',
+            text: '신규페이지',
+          },
+        ],
+      },
+      {
+        depth2: '금융소비자권리',
+        depth3: '위법계약해지권\nCustomer_P21_p002',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/customer/Customer_P21_p002',
+        status: 'ing',
+        create: '2024.07.25',
+        log: [
+          {
+            date: '2024.07.25',
+            text: '신규페이지',
+          },
+        ],
+      },
+      // // E: 240725 추가
       {
         depth2: '금융소비자보호',
         depth3: '중도상환수수료 면제\nCustomer_P09_p009',
@@ -1175,6 +1533,24 @@ const datas = () => [
         create: '2023.12.01',
         log: [],
       },
+      // S: 240725 추가
+      {
+        depth2: '민원창구·유익정보',
+        depth3: '소비자권익보호 유익한 정보\nCustomer_P22_p001',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/customer/Customer_P22_p001',
+        status: 'end',
+        create: '2024.07.25',
+        log: [
+          {
+            date: '2024.07.25',
+            text: '신규페이지',
+          },
+        ],
+      },
+      // //E: 240725 추가
       {
         depth2: '방문·전화권유판매원 조회 \nCustomer_P20_p001',
         depth3: '팝업',
@@ -1186,6 +1562,43 @@ const datas = () => [
         create: '2023.12.01',
         log: [],
       },
+      // s: 240906 추가
+      {
+        depth2: '개인채무자보호법 채무조정',
+        depth3: '',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/customer/Customer_DS_W01',
+        status: 'end',
+        create: '2024.09.06',
+        log: [],
+      },
+      // e:// 240906 추가
+      // s: 240912 추가
+      {
+        depth2: '통지문서조회',
+        depth3: '',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/customer/DS_NO_W01_01',
+        status: 'ing',
+        create: '2024.09.12',
+        log: [],
+      },
+      {
+        depth2: '통지문서조회',
+        depth3: '팝업',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/customer/DS_NO_W01_02',
+        status: 'ing',
+        create: '2024.09.12',
+        log: [],
+      },
+      // e:// 240912 추가
     ],
   },
   {
@@ -2021,7 +2434,7 @@ const datas = () => [
         depth5: '',
         depth6: '',
         path: '/ui-guide/personal-loan-005',
-        status: 'end',
+        status: 'ing',
         create: '2023.05.26',
         log: [
           {
@@ -2047,6 +2460,14 @@ const datas = () => [
           {
             date: '2023.08.25',
             text: '팝업추가\n- PF_P07_l301 대출 전 주요 체크포인트 팝업',
+          },
+          {
+            date: '2024.05.24',
+            text: '팝업추가\n- PF_P07_l004_001 금융취약 소비자 우선설명 팝업',
+          },
+          {
+            date: '2024.05.24',
+            text: '팝업추가\n- PF_P07_l004_002 스탁론 약관_추후 내용추가 예정',
           },
         ],
       },
@@ -2260,6 +2681,19 @@ const datas = () => [
         create: '2023.05.26',
         log: [],
       },
+      //S: 240513 추가
+      {
+        depth2: '스탁론\nPF_P07_p000',
+        depth3: '',
+        depth4: '적합성·적정성 원칙 확인\nPF_P07_p017',
+        depth5: '',
+        depth6: '',
+        path: '/personal-loan/PF_P07_p017',
+        status: 'ing',
+        create: '2024.05.13',
+        log: [],
+      },
+      // //E: 240513 추가
       {
         depth2: '사업자주택담보대출\nPF_P09_p001',
         depth3: '',
@@ -3712,6 +4146,63 @@ const datas = () => [
         create: '2023.06.16',
         log: [],
       },
+      // S: 240513~14 추가
+      {
+        depth2: '진행상태조회',
+        depth3: '온라인약정\nMy_P03_l004',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/additional-service/My_P03_l004',
+        status: 'ing',
+        create: '2024.05.13',
+        log: [],
+      },
+      {
+        depth2: '진행상태조회',
+        depth3: '온라인약정\n계약자 정보 입력\nMy_P03_l016',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/additional-service/My_P03_l016',
+        status: 'ing',
+        create: '2024.05.13',
+        log: [],
+      },
+      {
+        depth2: '진행상태조회',
+        depth3: '온라인약정\n청구서 수령방법\nMy_P03_l017',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/additional-service/My_P03_l017',
+        status: 'ing',
+        create: '2024.05.14',
+        log: [],
+      },
+      {
+        depth2: '진행상태조회',
+        depth3: '온라인약정\n자동이체 정보입력\nMy_P03_l018',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/additional-service/My_P03_l018',
+        status: 'ing',
+        create: '2024.05.14',
+        log: [],
+      },
+      {
+        depth2: '진행상태조회',
+        depth3: '온라인약정\n금융조건 입력\nMy_P03_l021',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/additional-service/My_P03_l021',
+        status: 'ing',
+        create: '2024.05.14',
+        log: [],
+      },
+      // //E: 240513~14 추가
       {
         depth2: '서류등록',
         depth3: '약관동의/본인인증\nMy_P05_p011',
@@ -4457,6 +4948,17 @@ const datas = () => [
         log: [],
       },
       {
+        depth2: '다이렉트 오토리스\nAF_P02_p001',
+        depth3: '팝업',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/ui-guide/auto-006',
+        status: 'end',
+        create: '2024.04.05',
+        log: [],
+      },
+      {
         depth2: '오토할부\nAF_P03_p001',
         depth3: '',
         depth4: '',
@@ -5191,6 +5693,26 @@ const datas = () => [
         ],
       },
       {
+        depth2: '회사소개',
+        depth3: '하나금융그룹\nCompany_P01_p010',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/company/Company_P01_p010',
+        status: 'end',
+        create: '2024.05.16',
+        log: [
+          {
+            date: '2024.05.16',
+            text: '새로운 캐릭터 페이지 추가',
+          },
+          {
+            date: '2024.05.20',
+            text: '별웅이 아래 문구 삭제',
+          },
+        ],
+      },
+      {
         depth2: '윤리경영',
         depth3: '윤리헌장\nCompany_P02_p001',
         depth4: '',
@@ -5396,6 +5918,17 @@ const datas = () => [
             text: '버튼 케이스 추가',
           },
         ],
+      },
+      {
+        depth2: '채용정보',
+        depth3: '채용공고',
+        depth4: '상세\nCompany_P05_p005',
+        depth5: '',
+        depth6: '',
+        path: '/company/Company_P05_p005_test',
+        status: 'end',
+        create: '2024.01.09',
+        log: [],
       },
     ],
   },
@@ -5949,6 +6482,57 @@ const datas = () => [
       },
     ],
   },
+  // 20240313
+  {
+    depth1: 'CRM',
+    datas: [
+      {
+        depth2: '메인',
+        depth3: '상담목록',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/crm/Crm_P00_p001',
+        status: 'end',
+        create: '2024.03.15',
+        log: [],
+      },
+      {
+        depth2: '메인',
+        depth3: '상담목록',
+        depth4: '상담상세',
+        depth5: '',
+        depth6: '',
+        path: '/crm/Crm_P00_p002',
+        status: 'end',
+        create: '2024.03.15',
+        log: [],
+      },
+      {
+        depth2: '메인',
+        depth3: '제휴사 관리',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/crm/Crm_P01_p001',
+        status: 'end',
+        create: '2024.03.15',
+        log: [],
+      },
+      {
+        depth2: '메인',
+        depth3: '팝업',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/ui-guide/GuideCrm001',
+        status: 'end',
+        create: '2024.03.15',
+        log: [],
+      },
+    ],
+  },
+  // 20240313
 ];
 
 export default {

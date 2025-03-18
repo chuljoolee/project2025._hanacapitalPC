@@ -132,4 +132,22 @@ div.icon-list__block {
       background-color: transparent;
     }
   }
+
+  //241014
+  &__list__flex {
+    display: flex;
+    margin: 0px 0 0 -30px;
+    flex-wrap: wrap;
+    gap: 32px 0;
+    .icon-list__item {
+      width: 33.333333%;
+      margin-top: 0;
+      .icon-list__block {
+        align-items: flex-start;
+        .customer-links__list {
+          flex-direction: column;
+        }
+      }
+    }
+  } //241014
 }

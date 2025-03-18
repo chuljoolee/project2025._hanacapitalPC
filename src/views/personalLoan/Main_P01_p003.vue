@@ -19,6 +19,7 @@ import IconVip from '@/assets/images/icon/vip.svg?component';
 import IconStock from '@/assets/images/icon/stock.svg?component';
 import IconRealEstateSecurity from '@/assets/images/icon/real-estate-security.svg?component';
 import IconHome from '@/assets/images/icon/home.svg?component';
+// import IconMortgage from '@/assets/images/icon/mortgage-loan.svg?component';
 
 export default {
   components: {
@@ -36,6 +37,7 @@ export default {
     IconStock,
     IconRealEstateSecurity,
     IconHome,
+    // IconMortgage,
   },
   setup() {
     const store = {
@@ -275,6 +277,31 @@ export default {
             </div>
           </div>
         </li>
+        <!-- s: 250225 추가 -->
+        <li :class="$style['product-list__item']">
+          <div :class="$style['product-list__block']">
+            <div :class="$style['product-list__icon']">
+              <IconApt />
+            </div>
+            <h3 :class="$style['product-list__title']">하나모기지론</h3>
+            <p :class="$style['product-list__text']">
+              상환게획에 따라<br />최대 40년까지
+            </p>
+            <div :class="$style['product-list__link']">
+              <TextButton
+                theme="secondary"
+                :underline="true"
+                textSize="regular"
+                tagName="RouterLink"
+                to=""
+                :classNames="{ wrap: $style['product-list__link-button'] }"
+              >
+                바로가기
+              </TextButton>
+            </div>
+          </div>
+        </li>
+        <!-- e:// 250225 추가 -->
       </ul>
     </div>
   </PageContents>

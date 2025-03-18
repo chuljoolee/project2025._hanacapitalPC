@@ -18,18 +18,23 @@ import { useUiScrollBlockStore } from '@/stores/ui/scrollBlock';
 import { useUiHeaderStore } from '@/stores/ui/header';
 
 import DropDownMenu from '@/components/ui/layout/DropDownMenu.vue';
-import LayerSiteMap from '@/components/ui/layout/LayerSiteMap.vue';
+
+import LayerSiteMap from '@/components/ui/layout/Common_P00_l004.vue';
+import LayerSearch from '@/components/ui/layout/Common_P11_l001.vue';
 
 import ImgLogo from '@/assets/images/common/logo-main.svg?component';
 import IconMenu from '@/assets/images/common/menu.svg?component';
+import IconSearch from '@/assets/images/common/search.svg?component';
 
 export default {
   components: {
     RouterLink,
     DropDownMenu,
     LayerSiteMap,
+    LayerSearch,
     ImgLogo,
     IconMenu,
+    IconSearch,
   },
   props: {
     type: {
@@ -68,6 +73,7 @@ export default {
     const fixbar = ref(null);
     const fake = ref(null);
     const siteMap = ref(null);
+    const Search = ref(null);
     const navLayer = ref(null);
 
     const isBlocking = computed(() => {
@@ -129,6 +135,7 @@ export default {
         inventoryFinance: '재고금융',
         lmBlog: 'LM블로그',
         agent: '에이전트',
+        agentTest: '테스트',
       };
 
       return page[type];
@@ -165,6 +172,10 @@ export default {
 
     const siteMapOpen = (e = {}) => {
       siteMap.value.layer.open(e.target);
+    };
+
+    const searchOpen = (e = {}) => {
+      Search.value.layer.open(e.target);
     };
 
     const resetHoverFocus = () => {
@@ -291,6 +302,7 @@ export default {
       fixbar,
       fake,
       siteMap,
+      Search,
       navLayer,
       isBlocking,
       scrollbarsWidth,
@@ -298,6 +310,7 @@ export default {
       isDepthEnter,
       pageType,
       siteMapOpen,
+      searchOpen,
       onfocusin,
       onfocusout,
       onMouseenter,
@@ -449,6 +462,10 @@ export default {
                   text: '에이전트',
                   to: '/agent/Agent_P01_p001',
                 },
+                {
+                  text: 'CRM',
+                  to: '/crm/Crm_P00_p001',
+                },
               ]"
               theme="secondary"
             />
@@ -456,6 +473,22 @@ export default {
 
           <div v-if="type === 'default'" :class="$style['etc']">
             <ul :class="$style['etc__list']">
+              <!-- s: 250122 추가 -->
+              <li :class="$style['etc__item']">
+                <RouterLink to="" :class="$style['etc__link']">
+                  <span :class="[$style['etc__text'], 'color-gray']"
+                    >고객센터</span
+                  >
+                </RouterLink>
+              </li>
+              <li :class="[$style['etc__item'], 'paddingLeft']">
+                <RouterLink to="" :class="$style['etc__link']">
+                  <span :class="[$style['etc__text'], 'color-gray']"
+                    >소비자보호</span
+                  >
+                </RouterLink>
+              </li>
+              <!-- e:// 250122 추가 -->
               <li :class="$style['etc__item']">
                 <RouterLink to="" :class="$style['etc__link']">
                   <span :class="$style['etc__text']">로그인</span>
@@ -468,7 +501,20 @@ export default {
               </li>
             </ul>
 
+            <!-- s: 250122 추가 -->
             <div :class="$style['etc__menu']">
+              <button
+                type="button"
+                :class="$style['menu-button']"
+                @click="searchOpen"
+              >
+                <IconSearch />
+                <span class="for-a11y">검색창 열기</span>
+              </button>
+            </div>
+            <!-- e:// 250122 추가 -->
+
+            <div :class="[$style['etc__menu'], 'marginLeft']">
               <button
                 type="button"
                 :class="$style['menu-button']"
@@ -484,11 +530,38 @@ export default {
             v-else-if="
               type === 'inventoryFinance' ||
               type === 'lmBlog' ||
-              type === 'agent'
+              type === 'agent' ||
+              type === 'crm' ||
+              type === 'agentTest'
             "
             :class="$style['etc']"
           >
             <ul :class="$style['etc__list']">
+              <!-- s: 250204 재고금융, LM블로그, 에이전트 헤더에서의 삭제 요청 -->
+              <!-- s: 250122 추가 -->
+              <!-- <li :class="$style['etc__item']">
+                  <RouterLink to="" :class="$style['etc__link']">
+                    <span :class="[$style['etc__text'], 'color-gray']"
+                      >고객센터</span
+                    >
+                  </RouterLink>
+                </li>
+                <li :class="[$style['etc__item'], 'paddingLeft']">
+                  <RouterLink to="" :class="$style['etc__link']">
+                    <span :class="[$style['etc__text'], 'color-gray']"
+                      >소비자보호</span
+                    >
+                  </RouterLink>
+                </li> -->
+              <!-- e:// 250122 추가 -->
+              <!-- S: 240404 수정 -->
+              <!-- <li :class="$style['etc__item']">
+                  <RouterLink to="" :class="$style['etc__link']">
+                    <span :class="$style['etc__text']">리스/렌트</span>
+                  </RouterLink>
+                </li> -->
+              <!-- E: 240404 수정 -->
+              <!-- e:// 250204 재고금융, LM블로그, 에이전트 헤더에서의 삭제 요청 -->
               <li :class="$style['etc__item']">
                 <RouterLink to="" :class="$style['etc__link']">
                   <span :class="$style['etc__text']"
@@ -502,6 +575,31 @@ export default {
                 </RouterLink>
               </li>
             </ul>
+            <!-- s: 250204 재고금융, LM블로그, 에이전트 헤더에서의 삭제 요청 -->
+            <!-- s: 250122 추가 -->
+            <!-- <div :class="$style['etc__menu']">
+                <button
+                  type="button"
+                  :class="$style['menu-button']"
+                  @click="searchOpen"
+                >
+                  <IconSearch />
+                  <span class="for-a11y">검색창 열기</span>
+                </button>
+              </div> -->
+            <!-- e:// 250122 추가 -->
+
+            <!-- <div :class="[$style['etc__menu'], 'marginLeft']">
+                <button
+                  type="button"
+                  :class="$style['menu-button']"
+                  @click="siteMapOpen"
+                >
+                  <IconMenu />
+                  <span class="for-a11y">사이트맵 열기</span>
+                </button>
+              </div> -->
+            <!-- e:// 250204 재고금융, LM블로그, 에이전트 헤더에서의 삭제 요청 -->
           </div>
         </header>
       </div>
@@ -510,9 +608,25 @@ export default {
     <div ref="fake" :class="$style['top-bar__fake']"></div>
 
     <LayerSiteMap ref="siteMap" v-if="type === 'default'" />
+    <LayerSearch ref="Search" v-if="type === 'default'" />
+    <!-- 250122 추가 -->
   </div>
 </template>
 
 <style lang="scss" module>
 @import '@/assets/scss/layouts/HeaderBase.scss';
 </style>
+<!-- s: 250122 추가 -->
+<style lang="scss" scoped>
+.paddingLeft {
+  padding-left: 10px;
+  &:before {
+    content: '';
+    display: none;
+  }
+}
+.marginLeft {
+  margin-left: 20px;
+}
+</style>
+<!-- e:// 250122 추가 -->

@@ -150,71 +150,73 @@ export default {
           },
         ],
       },
-      {
-        name: 'customer',
-        text: '고객센터',
-        to: '/customer/Customer_P00_p001',
-        child: [
-          {
-            name: 'customer001',
-            text: 'FAQ',
-            to: '/customer/Customer_P01_p001',
-          },
-          {
-            name: 'customer002',
-            text: '고객상담',
-            to: '/customer/Customer_P02_p001',
-          },
-          {
-            name: 'customer003',
-            text: '공지사항',
-            to: '/customer/Customer_P03_p001',
-          },
-          {
-            name: 'customer004',
-            text: '이벤트',
-            to: '/customer/Customer_P04_p001',
-          },
-          {
-            name: 'customer005',
-            text: '개인정보이용 현황',
-            to: '/customer/Customer_P14_p001',
-          },
-          {
-            name: 'customer006',
-            text: '금융소비자보호',
-            to: '/customer/Customer_P09_p001',
-          },
-          {
-            name: 'customer007',
-            text: '전자민원접수',
-            to: '/customer/Customer_P15_p001',
-          },
-          {
-            name: 'customer008',
-            text: '그룹사간 고객정보 제공내역 조회',
-            to: '/customer/Customer_P16_p001',
-          },
-          {
-            name: 'customer009',
-            text: '인증센터',
-            to: '/customer/Customer_P11_p001',
-          },
-          {
-            name: 'customer010',
-            text: '대출계산기',
-            type: 'button',
-            click: () => {
-              alert('대출계산기 클릭');
-            },
-          },
-          {
-            name: 'customer011',
-            text: '전화상담신청',
-            to: '/additional-service/Etc_P01_p001',
-          },
-        ],
-      },
+      /* 250122 고객센터 메뉴 삭제 */
+      // {
+      //   name: 'customer',
+      //   text: '고객센터',
+      //   to: '/customer/Customer_P00_p001',
+      //   child: [
+      //     {
+      //       name: 'customer001',
+      //       text: 'FAQ',
+      //       to: '/customer/Customer_P01_p001',
+      //     },
+      //     {
+      //       name: 'customer002',
+      //       text: '고객상담',
+      //       to: '/customer/Customer_P02_p001',
+      //     },
+      //     {
+      //       name: 'customer003',
+      //       text: '공지사항',
+      //       to: '/customer/Customer_P03_p001',
+      //     },
+      //     {
+      //       name: 'customer004',
+      //       text: '이벤트',
+      //       to: '/customer/Customer_P04_p001',
+      //     },
+      //     {
+      //       name: 'customer005',
+      //       text: '개인정보이용 현황',
+      //       to: '/customer/Customer_P14_p001',
+      //     },
+      //     {
+      //       name: 'customer006',
+      //       text: '금융소비자보호',
+      //       to: '/customer/Customer_P09_p001',
+      //     },
+      //     {
+      //       name: 'customer007',
+      //       text: '전자민원접수',
+      //       to: '/customer/Customer_P15_p001',
+      //     },
+      //     {
+      //       name: 'customer008',
+      //       text: '그룹사간 고객정보 제공내역 조회',
+      //       to: '/customer/Customer_P16_p001',
+      //     },
+      //     {
+      //       name: 'customer009',
+      //       text: '인증센터',
+      //       to: '/customer/Customer_P11_p001',
+      //     },
+      //     {
+      //       name: 'customer010',
+      //       text: '대출계산기',
+      //       type: 'button',
+      //       click: () => {
+      //         alert('대출계산기 클릭');
+      //       },
+      //     },
+      //     {
+      //       name: 'customer011',
+      //       text: '전화상담신청',
+      //       to: '/additional-service/Etc_P01_p001',
+      //     },
+      //   ],
+      // },
+      /* // 250122 고객센터 메뉴 삭제 */
     ];
 
     return {

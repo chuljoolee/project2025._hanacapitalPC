@@ -1,4 +1,4 @@
-name: deploy
+name: Deploy
 
 on:
   push:
@@ -8,28 +8,36 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout source code.
-        uses: actions/checkout@master
+      - name: Checkout source code
+        uses: actions/checkout@v3
 
-      - name: Clean
-        run: yarn cache clean
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+          cache: 'yarn'
 
-      - name: Install
-        run: yarn
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
 
       - name: Build
-        run: yarn publish-build
+        run: yarn build:github
+        env:
+          NODE_ENV: production
 
-      - name: Deploy
-        uses: SamKirkland/FTP-Deploy-Action@master
+      # 404.html 파일 생성 (GitHub Pages SPA 지원용)
+      - name: Create 404.html
+        run: cp dist/app/index.html dist/app/404.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
         with:
-          server: ${{ secrets.FTP_DEV_HOST }}
-          username: ${{ secrets.FTP_DEV_USERNAME }}
-          password: ${{ secrets.FTP_DEV_PASSWORD }}
-          local-dir: ./dist/app/
-          server-dir: VOL1/www_document_root/pub/hanacapital-dt-rebuild/pc/
-          exclude: |
-            **/.htaccess
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/app
+          # 커스텀 도메인이 있는 경우 아래 줄의 주석을 제거하고 설정
+          # cname: your-custom-domain.com

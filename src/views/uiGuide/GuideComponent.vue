@@ -601,9 +601,9 @@ export default {
             <template v-slot:head>
               <PopupTitle>타이틀</PopupTitle>
             </template>
+            <PopupText>// contents</PopupText>
+            <PopupText>// contents</PopupText>
 
-            <PopupText>// contents</PopupText>
-            <PopupText>// contents</PopupText>
 
             <template v-slot:foot>
               <ButtonList
@@ -779,7 +779,6 @@ export default {
           </template>
         </BasicButton>
       </div>
-
       <div class="test-section-sub">
         <h3 class="test-section-sub-title">Router Link</h3>
         <BasicButton tagName="RouterLink" to="/">

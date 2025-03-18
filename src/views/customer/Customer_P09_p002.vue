@@ -64,18 +64,25 @@ export default {
       <PageTitle>금융소비자보호조직</PageTitle>
     </PageHead>
 
+    <!-- S: 240725 추가 -->
+    <picture class="org-img">
+      <img src="@/assets/images/contents/img-organization.png" alt="" />
+    </picture>
+    <!-- // E: 240725 추가 -->
+
+    <!-- S: 240725 수정 -->
     <div :class="$style['section-group']">
       <div :class="$style['section-group__list']">
         <section :class="$style['section-group__item']">
           <BasicBox theme="tertiary" :class="$style['section-group__box']">
             <h3 class="text-title-2 font-weight-medium row-margin-item">
-              소비자보호책임자
+              금융소비자보호 내부통제위원회
             </h3>
 
             <p class="text-body-2 color-gray-tertiary">
-              금융소비자보호에 관한 의사결정이 전사적 시각에서<br />
-              효율적으로 이루어지도록 소비자보호제반 업무를 총괄하는<br />
-              독립적 지위의 소비자보호책임자를 지정하여 운영하고 있습니다.
+              금융소비자보호 관련 경영방향 수립, 주요 제도 변경·개선 등<br />
+              금융소비자보호에 관한 내부통제를 수행하기 위하여 금융소비자보호<br />
+              내부통제위원회 설치·운영하고 있습니다.
             </p>
           </BasicBox>
         </section>
@@ -83,15 +90,13 @@ export default {
         <section :class="$style['section-group__item']">
           <BasicBox theme="tertiary" :class="$style['section-group__box']">
             <h3 class="text-title-2 font-weight-medium row-margin-item">
-              소비자보호협의회
+              금융소비자보호총괄책임자 (CCO)
             </h3>
 
             <p class="text-body-2 color-gray-tertiary">
-              금융소비자보호 관련 이슈를 종합적인 시각에서 신속하고 효과적으로
-              조정하기 위하여<br />
-              소비자보호책임자가 주관하여 운영하고<br />
-              관련 임원 및 부서장이 참여하는 금융소비자보호협의회를 설치
-              운영하고 있습니다.
+              대표이사 직속으로 설치한 금융소비자보호 총괄기관의<br />
+              최고책임자로서 금융소비자보호 내부통제체제의 총괄 등<br />
+              금융소비자보호 총괄기관의 업무를 수행하고 있습니다.
             </p>
           </BasicBox>
         </section>
@@ -113,20 +118,22 @@ export default {
         <section :class="$style['section-group__item']">
           <BasicBox theme="tertiary" :class="$style['section-group__box']">
             <h3 class="text-title-2 font-weight-medium row-margin-item">
-              소비자보호 총괄부서
+              금융소비자보호총괄부서
             </h3>
 
             <p class="text-body-2 color-gray-tertiary">
-              책임과 권한을 가지고<br />
-              금융소비자보호업무를 수행할 소비자보호 총괄부서를<br />
-              설치 운영하고 있습니다.
+              금융소비자보호에 관한<br />
+              내부통제, 금융소비자보호, 민원 처리 및 예방 활동 등의<br />
+              업무를 수행하고 있습니다.
             </p>
           </BasicBox>
         </section>
       </div>
     </div>
+    <!-- // E: 240725 수정 -->
 
-    <div :class="[$style['logs-wrap'], 'row-margin-block-small']">
+    <!-- 240725 삭제 -->
+    <!-- <div :class="[$style['logs-wrap'], 'row-margin-block-small']">
       <ul :class="$style['logs']">
         <li :class="$style['logs__item']">
           <div
@@ -255,10 +262,16 @@ export default {
           </div>
         </li>
       </ul>
-    </div>
+    </div> -->
   </PageContents>
 </template>
 
 <style lang="scss" module>
 @import '@/assets/scss/views/customer/Customer_P09_p002.scss';
+</style>
+
+<style lang="scss" scoped>
+.org-img {
+  margin-bottom: 40px;
+}
 </style>

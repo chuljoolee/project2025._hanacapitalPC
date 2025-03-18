@@ -1,0 +1,31 @@
+@import '@/assets/scss/components/import/basic-list.scss';
+@import '@/assets/scss/components/import/basic-table.scss';
+@import '@/assets/scss/components/import/notice-section.scss';
+@import '@/assets/scss/components/import/logs.scss';
+@import '@/assets/scss/components/import/contents-list.scss';
+
+.logs-wrap {
+  margin-top: 0;
+
+  &::before {
+    content: '';
+    display: table;
+  }
+
+  .logs {
+    margin: -10px 0 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      padding: 10px 0 0 10px;
+      width: 25%;
+
+      & + .logs__item {
+        margin: 0;
+      }
+    }
+  }
+}

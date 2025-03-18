@@ -349,14 +349,21 @@ export default {
                               >
                                 미회수원금 X 중도해지손해배상금률
                               </div>
-                              <div
-                                class="text-body-4 font-weight-light row-margin-small"
-                              >
-                                미회수원금 X 최고요율(80)% X (잔여기간
-                                월수/리스기간 전체월수)
-                              </div>
                             </div>
                           </div>
+                          <!-- S: 240405 수정 -->
+                          <div class="contents-list__add">
+                            <p class="txtEdit">※ 경과 개월별 차등 인하</p>
+                            <TextButton
+                              theme="secondary"
+                              underline="true"
+                              textSize="regular"
+                              @click="show = !show"
+                            >
+                              <p>중도해지손해배상금 세부내역</p>
+                            </TextButton>
+                          </div>
+                          <!-- E: 240405 수정 -->
                         </li>
                         <li :class="$style['contents-list__item']">
                           <div :class="$style['contents-list__head']">
@@ -902,3 +909,22 @@ export default {
 <style lang="scss" module>
 @import '@/assets/scss/views/auto/AF_P02_p001_contents.scss';
 </style>
+
+<!-- S: 240405 수정 -->
+<style lang="scss" scoped>
+.contents-list__add {
+  margin-top: 16px;
+
+  & p {
+    margin: 0;
+  }
+  .txtEdit {
+    font-size: 13px;
+    line-height: 19.5px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 10px;
+  }
+}
+</style>
+<!-- E: 240405 수정 -->

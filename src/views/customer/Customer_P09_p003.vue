@@ -10,6 +10,7 @@ import PageHead from '@/components/ui/text/PageHead.vue';
 import PageTitle from '@/components/ui/text/PageTitle.vue';
 import BasicBox from '@/components/ui/common/BasicBox.vue';
 import PageSubText from '@/components/ui/text/PageSubText.vue';
+import TextButton from '@/components/ui/button/TextButton.vue'; //240725 추가
 
 export default {
   components: {
@@ -19,6 +20,7 @@ export default {
     PageTitle,
     BasicBox,
     PageSubText,
+    TextButton, //240725 추가
   },
   setup() {
     const store = {
@@ -77,7 +79,10 @@ export default {
     <div :class="$style['section-group']">
       <div :class="$style['section-group__list']">
         <section :class="$style['section-group__item']">
-          <BasicBox theme="tertiary" :class="$style['section-group__box']">
+          <BasicBox
+            theme="tertiary"
+            :class="{ [$style['section-group__box']]: true, positionBox: true }"
+          >
             <h3 class="text-title-2 font-weight-medium row-margin-item">
               금융소비자보호 규정
             </h3>
@@ -114,6 +119,19 @@ export default {
                 </div>
               </li>
             </ul>
+
+            <TextButton
+              theme="secondary"
+              :underline="true"
+              textSize="regular"
+              tagName="RouterLink"
+              to=""
+              :classNames="{
+                wrap: [$style['product-list__link-button'], 'textButton'],
+              }"
+            >
+              제정·개정 이력 자세히보기
+            </TextButton>
           </BasicBox>
         </section>
 
@@ -172,12 +190,16 @@ export default {
             <ul :class="[$style['basic-list'], $style['basic-list--regular']]">
               <li :class="[$style['basic-list__item'], 'font-weight-regular']">
                 <div :class="$style['basic-list__symbol']"></div>
+                <!-- S: 240725 수정 -->
                 <div :class="$style['basic-list__content']">
                   신상품 개발 및 마케팅 정책 수립 시 주관부서와 금융소비자보호
-                  총괄부서간 사전 협의를 의무화하고 소비자권익침해 가능성이 있는
-                  경우 주관부서에 신상품출시 및 마케팅 중단을 요구 하는등 소비자
-                  의견을 반영하기 위해 노력합니다.
+                  총괄부서간<br />
+                  사전 협의를 의무화 하고 소비자권익침해 가능성이 있는 경우
+                  주관부서에<br />
+                  신상품 출시 및 마케팅 중단을 요구 하는 등 소비자 의견을
+                  반영하기 위해 노력합니다.
                 </div>
+                <!-- // E: 240725 수정 -->
               </li>
               <li :class="[$style['basic-list__item'], 'font-weight-regular']">
                 <div :class="$style['basic-list__symbol']"></div>
@@ -196,6 +218,22 @@ export default {
             </h3>
 
             <ul :class="[$style['basic-list'], $style['basic-list--regular']]">
+              <!-- 241014 -->
+              <li :class="[$style['basic-list__item'], 'font-weight-regular']">
+                <div :class="$style['basic-list__symbol']"></div>
+                <div :class="$style['basic-list__content']">
+                  재무상태를 파악하여 소비자에게 적합한 금융상품을 안내할 수
+                  있도록 한다.
+                </div>
+              </li>
+              <li :class="[$style['basic-list__item'], 'font-weight-regular']">
+                <div :class="$style['basic-list__symbol']"></div>
+                <div :class="$style['basic-list__content']">
+                  소비자에게 부적정한 상품에 대한 정보를 최대한 제공하고,
+                  부적정한 경우 이 사실을 고지한다.
+                </div>
+              </li>
+              <!-- //241014 -->
               <li :class="[$style['basic-list__item'], 'font-weight-regular']">
                 <div :class="$style['basic-list__symbol']"></div>
                 <div :class="$style['basic-list__content']">
@@ -228,16 +266,20 @@ export default {
                   정보만 수집활용한다.
                 </div>
               </li>
+              <!-- 241014 -->
+              <li :class="[$style['basic-list__item'], 'font-weight-regular']">
+                <div :class="$style['basic-list__symbol']"></div>
+                <div :class="$style['basic-list__content']">
+                  금융상품 광고 시 관련 법령 준수하여 적합한 상품을 광고한다.
+                </div>
+              </li>
+              <!-- //241014 -->
             </ul>
           </BasicBox>
         </section>
 
-        <section
-          :class="[
-            $style['section-group__item'],
-            $style['section-group__item--full'],
-          ]"
-        >
+        <section :class="[$style['section-group__item']]">
+          <!-- 기존 적용되어있던 $style['section-group__item--full'] 삭제 -->
           <BasicBox theme="tertiary" :class="$style['section-group__box']">
             <h3 class="text-title-2 font-weight-medium row-margin-item">
               민원사무처리 지침
@@ -278,7 +320,8 @@ export default {
       </div>
     </div>
 
-    <div :class="[$style['logs-wrap'], 'row-margin-block-small']">
+    <!-- 240725 삭제 -->
+    <!-- <div :class="[$style['logs-wrap'], 'row-margin-block-small']">
       <ul :class="$style['logs']">
         <li :class="$style['logs__item']">
           <div
@@ -407,10 +450,22 @@ export default {
           </div>
         </li>
       </ul>
-    </div>
+    </div> -->
   </PageContents>
 </template>
 
 <style lang="scss" module>
 @import '@/assets/scss/views/customer/Customer_P09_p003.scss';
+</style>
+
+<style lang="scss" scoped>
+.positionBox {
+  position: relative;
+
+  .textButton {
+    position: absolute;
+    right: 23px;
+    top: 23px;
+  }
+}
 </style>
